@@ -24,4 +24,5 @@ export class DataService {
   getProjects(): Observable<any> {
     return this.projects$;
   }
+
 }
