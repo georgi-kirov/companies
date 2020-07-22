@@ -1,28 +1,23 @@
 import { Injectable } from '@angular/core';
 import { Observable, BehaviorSubject, Subject } from 'rxjs';
-import { HttpClient } from 'selenium-webdriver/http';
 import { Company, Employee, Project } from './dataModels';
-
+import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
 export class DataService {
-  private companies$: Subject<Company[]> = new BehaviorSubject([]);
-  private employees$: Subject<Employee[]> = new BehaviorSubject([]);
-  private projects$: Subject<Project[]> = new BehaviorSubject([]);
 
   constructor(private http: HttpClient) { }
 
   getCompanies(): Observable<any> {
-    return this.companies$;
+    return this.http.get<Company[]>('../../assets/data/companies.json');
   }
 
   getEmployees(): Observable<any> {
-    return this.employees$;
+    return this.http.get<Employee[]>('../../assets/data/employees.json');
   }
 
   getProjects(): Observable<any> {
-    return this.projects$;
+    return this.http.get<Project[]>('../../assets/data/projects.json');
   }
-
 }
