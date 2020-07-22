@@ -12,7 +12,7 @@ export class Employee {
     public id: string,
     public firstName: string,
     public lastName: string,
-    public dateOfBirth: Date,
+    public dateOfBirth: string,
     public companyId: string,
     public jobTitle: string,
     public jobArea: string,
