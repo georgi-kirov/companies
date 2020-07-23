@@ -1,12 +1,8 @@
-<div class="container">
-  <ul>
-    <li *ngFor="let comp of companies">
-      <p>{{ comp.id }}</p>
-      <p>{{ comp.name }}</p>
-      <p>{{ comp.business }}</p>
-      <p>{{ comp.slogan }}</p>
-    </li>
-  </ul>
+<div id="container">
+  <div *ngIf="companies.length">
+    <p-tieredMenu [model]="companies"></p-tieredMenu>
+  </div>
+  <div id="content">
+    <router-outlet></router-outlet>
+  </div>
 </div>
-
-<router-outlet></router-outlet>
