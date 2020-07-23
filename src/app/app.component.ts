@@ -32,9 +32,9 @@ export class AppComponent implements OnInit {
           // helper to check if we already have this jobsArea
           const currentJobAreas = [];
           c.items = companyEmployees.reduce((result, empl) => {
-            if (currentJobAreas.includes(empl.jobType)) {
+            if (currentJobAreas.includes(empl.jobArea)) {
               const jobArea = result.find(item => item.label === empl.jobArea);
-              jobArea.item.push({ label: `${empl.firstName} ${empl.lastName}` });
+              jobArea.items.push({ label: `${empl.firstName} ${empl.lastName}` });
             } else {
               currentJobAreas.push(empl.jobArea);
               result.push({
