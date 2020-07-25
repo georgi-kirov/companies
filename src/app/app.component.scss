@@ -1,2 +1,8 @@
 #container {
+  .menu {
+    z-index: 10;
+  }
+  .pages-container {
+    z-index: 1;
+  }
 }

@@ -1,11 +1,32 @@
 <div class="company-container" *ngIf="company">
-  <p class="company-name">{{ company.name }}</p>
-  <div class="row">
-    <div class="company-business col-6">
-      {{ company.business }}
+  <!-- Main company info -->
+  <div class="company">
+    <p class="company-name">{{ company.name }}</p>
+    <div class="row">
+      <div class="company-business col-6">
+        {{ company.business }}
+      </div>
+      <div class="company-slogan col-6">
+        {{ company.slogan }}
+      </div>
     </div>
-    <div class="company-slogan col-6">
-      {{ company.slogan }}
-    </div>
+  </div>
+  <!-- Company address -->
+  <hr>
+  <h1>Company addresses</h1>
+  <div class="company-address" *ngFor="let address of companyAddress">
+    <div class="company-city">City: {{address.city}}</div>
+    <div class="company-country">Country: {{address.country}}</div>
+    <div class="company-street">Street: {{address.street}}</div>
+    <div class="company-state">State: {{address.state}}</div>
+    <hr>
+  </div>
+  <!-- Company projects -->
+  <hr>
+  <h1>Company projects</h1>
+  <div class="company-projects" *ngFor="let project of companyProjects">
+    <div class="project-name">Project name: {{project.name}}</div>
+    <div class="project-department">Project department: {{project.department}}</div>
+    <hr>
   </div>
 </div>
