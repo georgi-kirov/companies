@@ -9,6 +9,7 @@ import { NavigationComponent } from './components/navigation/navigation/navigati
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // *** PrimeNg ***
 import { TieredMenuModule } from 'primeng/tieredmenu';
+import { PageNotFoundComponent } from './components/pageNotFound/page-not-found/page-not-found.component';
 // *** PrimeNg ***
 
 @NgModule({
@@ -16,6 +17,7 @@ import { TieredMenuModule } from 'primeng/tieredmenu';
     AppComponent,
     CompanyComponent,
     NavigationComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,

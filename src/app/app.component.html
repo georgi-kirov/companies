@@ -1,8 +1,8 @@
-<div id="container">
-  <div *ngIf="companies.length">
+<div id="container" class="row">
+  <div class="menu col-2" *ngIf="companies.length">
     <p-tieredMenu [model]="companies"></p-tieredMenu>
   </div>
-  <div id="content">
+  <div class="pages-container col-10" id="content">
     <router-outlet></router-outlet>
   </div>
 </div>

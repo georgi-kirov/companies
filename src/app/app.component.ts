@@ -54,6 +54,7 @@ export class AppComponent implements OnInit {
       result.push({
         label: company.name,
         id: company.id,
+        routerLink: [`/company/${company.id}`],
         items: [],
       });
       return result;
